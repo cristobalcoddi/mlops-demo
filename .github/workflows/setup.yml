@@ -24,18 +24,18 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Check Out Repository
       id: checkout_repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     
     # Login to Azure
     - name: Azure Login
       id: azure_login
-      uses: azure/login@v1
+      uses: azure/login@v2
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     # Deploys Azure resources 
     - name: Deploy Azure resources
-      uses: azure/CLI@v1
+      uses: azure/cli@v2
       with:
         azcliversion: latest
         inlineScript: |
