@@ -4,9 +4,13 @@
 name: training_env
 dependencies:
   - python=3.8
-  - scikit-learn=0.23.1
-  - matplotlib=3.2.2
-  - numpy=1.19.0
+  - scikit-learn
+  - matplotlib
+  - numpy
+  - pip
+  #- scikit-learn=0.23.1
+  #- matplotlib=3.2.2
+  #- numpy=1.19.0
   - pip:
     - azureml-defaults==1.21.0
 channels:
